@@ -1,12 +1,14 @@
+<!-- <?php var_dump($_GET["id"]) ?> -->
+
 <!doctype html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation film</title>
+    <script src="./src/film.js" defer></script>
     <link href="/dist/output.css" rel="stylesheet">
-    <title>Accueil</title>
-    <script src="./src/index.js" defer></script>
 </head>
 
 <body>
@@ -49,8 +51,9 @@
         </nav>
 
     </header>
-    <!-- adapté au différentes pages -->
-    <main id="liste-films" class="flex flex-wrap justify-center pt-24">
+    <input id="mon-id-film" type="text" value=<?php echo ($_GET["id"]); ?> hidden>
+    <!-- adapté aux différentes pages -->
+    <main id="presentation-film" class="flex flex-wrap justify-center pt-24">
         <!-- js -->
     </main>
     <!-- fixe -->

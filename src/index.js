@@ -10,7 +10,7 @@
 //     {titre: "film 9", duree: 120, affiche:""},
 // ];
 
-const apiKey = '6981a4d001d260e9b85267e953d07443'
+const apiKey = '214eda37174bc3fb074893f03d073475'
 
 let films = async() => await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`)
 .then(function(response) {
@@ -32,7 +32,7 @@ films().then(films => films.map((film) => {
   console.log(film.overview);
   filmCard.innerHTML = `
     <div class="max-w-[200px] m-1 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
+        <a href="http://localhost:4000/film.php?id=${film.id}">
             <img class="rounded-t-lg" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/${film.backdrop_path}" alt="" />
         </a>
         <div class="p-5">
